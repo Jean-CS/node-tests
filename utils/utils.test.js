@@ -18,6 +18,20 @@ it('should square a number', () => {
     .toBeA('number');
 });
 
+it('should set firstName and lastName', () => {
+  let user = {location: 'Taiwan', age: 35}; // javascript is pass by reference. this object will be updated when the method below call 'setName'
+  let res = utils.setName(user, 'Brittany Spears');
+
+  expect(res)
+    .toInclude({
+      firstName: 'Brittany',
+      lastName: 'Spears'
+    })
+    .toBeA('object');
+
+  
+});
+
 // it('should expect some values', () => {
 //   // expect(12).toNotBe(5); // true
 
