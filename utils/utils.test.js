@@ -28,8 +28,13 @@ it('should set firstName and lastName', () => {
       lastName: 'Spears'
     })
     .toBeA('object');
+});
 
-  
+it('should async add two numbers', (done) => {
+  utils.asyncAdd(3, 4, (sum) => {
+    expect(sum).toBe(7).toBeA('number');
+    done();
+  });
 });
 
 // it('should expect some values', () => {
