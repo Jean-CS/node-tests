@@ -37,6 +37,13 @@ it('should async add two numbers', (done) => {
   });
 });
 
+it('should async square two numbers', (done) => {
+  utils.asyncSquare(3, (sqr) => {
+    expect(sqr).toBe(9).toBeA('number');
+    done();
+  });
+});
+
 // it('should expect some values', () => {
 //   // expect(12).toNotBe(5); // true
 
