@@ -9,6 +9,19 @@ app.get('/', (req, res) => {
   })
 });
 
+app.get('/users', (req, res) => {
+  res.status(200).send([
+    {
+      name: 'Dude 1',
+      age: 22
+    }, 
+    {
+      name: 'Girl 2',
+      age: 16
+    }
+  ])
+});
+
 app.listen(3000);
 
 module.exports.app = app;
